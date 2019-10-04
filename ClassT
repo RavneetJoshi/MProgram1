@@ -1,0 +1,144 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using AssignmentM2;
+using NUnit.Framework;
+namespace testcase
+{
+    [TestFixture]
+    public class testcase
+    {
+        [Test]
+        public void Get_invaid_triangle()
+        {
+            //Arrange
+            int side1 = 4;
+            int side2 = 2;
+            int side3 = 10;
+
+
+            //Act
+            String str = TriangleSolver.Analyze(side1, side2, side3);
+
+            //Assert
+            Assert.AreEqual("Triangle is not Valid", str);
+
+        }
+        [Test]
+        public void Get_scalene_triangle()
+        {
+            //Arrange
+            int side1 = 8;
+            int side2 = 7;
+            int side3 = 9;
+
+
+            //Act
+            String str = TriangleSolver.Analyze(side1, side2, side3);
+
+            //Assert
+            Assert.AreEqual("Triangle is scalene", str);
+
+        }
+        [Test]
+        public void Get_equilateral_triangle()
+        {
+            //Arrange
+            int side1 = 7;
+            int side2 = 7;
+            int side3 = 7;
+
+
+            //Act
+            String str = TriangleSolver.Analyze(side1, side2, side3);
+
+            //Assert
+            Assert.AreEqual("Triangle is Equilateral", str);
+
+        }
+        [Test]
+        public void Get_isosceles_triangle()
+        {
+            //Arrange
+            int side1 = 8;
+            int side2 = 8;
+            int side3 = 3;
+
+
+            //Act
+            String str = TriangleSolver.Analyze(side1, side2, side3);
+
+            //Assert
+            Assert.AreEqual("Triangle is isosceles", str);
+
+        }
+        [Test]
+        public void Get1_isosceles_triangle()
+        {
+            //Arrange
+            int side1 = 13;
+            int side2 = 13;
+            int side3 = 9;
+
+
+            //Act
+            String str = TriangleSolver.Analyze(side1, side2, side3);
+
+            //Assert
+            Assert.AreEqual("Triangle is isosceles", str);
+
+        }
+        [Test]
+        public void Get1_equilateral_triangle()
+        {
+            //Arrange
+            int side1 = 6;
+            int side2 = 6;
+            int side3 = 6;
+
+
+            //Act
+            String str = TriangleSolver.Analyze(side1, side2, side3);
+
+            //Assert
+            Assert.AreEqual("Triangle is Equilateral", str);
+
+        }
+        [Test]
+        public void Get1_scalene_triangle()
+        {
+            //Arrange
+            int side1 = 12;
+            int side2 = 13;
+            int side3 = 18;
+
+
+            //Act
+            String str = TriangleSolver.Analyze(side1, side2, side3);
+
+            //Assert
+            Assert.AreEqual("Triangle is scalene", str);
+
+        }
+        [Test]
+        public void Get1_invaid_triangle()
+        {
+            //Arrange
+            int side1 = 1;
+            int side2 = 33;
+            int side3 = 82;
+
+
+            //Act
+            String str = TriangleSolver.Analyze(side1, side2, side3);
+
+            //Assert
+            Assert.AreEqual("Triangle is not Valid", str);
+
+        }
+    }
+}
+
+
